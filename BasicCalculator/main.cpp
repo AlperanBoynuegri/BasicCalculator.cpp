@@ -2,8 +2,8 @@
 #include "functions.h"
 using namespace std;
 int main() {
-    int initalnumber;
-    int number;
+    float initalnumber;
+    float number;
     cout << "Enter number 1: ";
     cin >> initalnumber;
     while(cin.fail()) {
@@ -13,19 +13,19 @@ int main() {
         cout << "enter number 1: ";
         cin >> initalnumber;
     }
-    char c='c';
-    while(c!= '=') {
+    string c="c";
+    while(c!= "=") {
         cout << "Islem:";
         cin >> c;
-        while (c != '+' && c != '-' && c != '*' && c != '/') {
-            cout << "wrong calculation try again."<<endl;
+        while (c != "+" && c != "-" && c != "*" && c != "/") {
+            cout << "1wrong calculation try again."<<endl;
             cout << "enter ıslem: ";
             cin>>c;
         }
         while(cin.fail()) {
             cin.clear();
             cin.ignore();
-            cout <<"wrong calculation try again."<<endl;
+            cout <<"2wrong calculation try again."<<endl;
             cout << "enter calculation: ";
             cin >> c;
         }
@@ -38,7 +38,7 @@ int main() {
             cout << "enter number : ";
             cin >> number;
         }
-        initalnumber=calculate(c,initalnumber, number);
+        initalnumber=calculate( c,initalnumber, number);
         cout << initalnumber << endl;
     }
 }
