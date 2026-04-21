@@ -8,7 +8,7 @@ int main() {
     cin >> initalnumber;
     while(cin.fail()) {
         cin.clear();
-        cin.ignore();
+        cin.ignore(1000, '\n');
         cout <<"it is not a number,try again."<<endl;
         cout << "enter number 1: ";
         cin >> initalnumber;
@@ -19,12 +19,12 @@ int main() {
         cin >> c;
         while (c != "+" && c != "-" && c != "*" && c != "/") {
             cout << "1wrong calculation try again."<<endl;
-            cout << "enter ıslem: ";
+            // cout << "enter ıslem: ";
             cin>>c;
         }
         while(cin.fail()) {
             cin.clear();
-            cin.ignore();
+            cin.ignore(1000, '\n');
             cout <<"2wrong calculation try again."<<endl;
             cout << "enter calculation: ";
             cin >> c;
@@ -33,7 +33,7 @@ int main() {
         cin >> number;
         while(cin.fail()) {
             cin.clear();
-            cin.ignore();
+            cin.ignore(1000, '\n');
             cout <<"it is not a number,try again."<<endl;
             cout << "enter number : ";
             cin >> number;
